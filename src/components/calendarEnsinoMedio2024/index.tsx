@@ -11,6 +11,7 @@ import { CalendarSetembro } from '../calendar/calendarMedio2024/setembro';
 import { CalendarOutubro } from '../calendar/calendarMedio2024/outubro';
 import { CalendarNovembro } from '../calendar/calendarMedio2024/novembro';
 import { CalendarDezembro } from '../calendar/calendarMedio2024/dezembro';
+import { tintColorGreenDark } from '../../constants/colors';
 
 const CalendarEnsinoMedio2024= () => {
 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
 
   container: {
     width: '100%',
-    backgroundColor: '#295c0d',
+    backgroundColor: tintColorGreenDark,
     padding: 10,
   },
 });

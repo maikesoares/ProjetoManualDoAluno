@@ -3,6 +3,8 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
+
 type FontAwesomeIconName =
   | 'newspaper-o'
   | 'home'
@@ -24,7 +26,6 @@ type FontAwesomeIconName =
   | 'search'
   | 'weixin'
   | 'plane'
-  // Adicione outros ícones conforme necessário
   ;
 
 interface Service {
@@ -84,25 +85,25 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 16,
-    backgroundColor: '#f1f1f1', // Cor de fundo clara
+    backgroundColor: tintColorBackGround, 
   },
 
   header: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#004d40', // Verde escuro
+    color: tintColorGreenDark,
     marginBottom: 20,
     textAlign: 'center',
   },
 
   gridItem: {
-    backgroundColor: '#ffffff', // Branco
+    backgroundColor: tintColorWhite, 
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginBottom: 15,
     width: '100%',
-    shadowColor: '#000',
+    shadowColor: tintColorBlack,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 6,
@@ -114,10 +115,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#000000', 
+    color: tintColorBlack, 
   },
 
   icon: {
-    color: '#004d40',
+    color: tintColorGreenDark,
   },
 });

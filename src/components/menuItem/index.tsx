@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { MenuItem, SubItem } from '../../types/types';
+import { tintColorGreenDark, tintColorGreenDarkOpacity, tintColorWhite } from '../../constants/colors';
 
 interface MenuItemProps {
   item: MenuItem;
@@ -48,9 +49,9 @@ const styles = StyleSheet.create({
   },
 
   menuText: {
-    color: '#fff',
+    color: tintColorWhite,
     fontSize: 18,
-    backgroundColor: '#004d40',
+    backgroundColor: tintColorGreenDark,
     padding: 10,
     borderRadius: 10,
   },
@@ -65,9 +66,9 @@ const styles = StyleSheet.create({
   },
 
   subItemText: {
-    color: '#fff',
+    color: tintColorWhite,
     fontSize: 16,
-    backgroundColor: '#004d40d3',
+    backgroundColor: tintColorGreenDarkOpacity,
     padding: 6,
     borderRadius: 10,
     textAlign: 'center',

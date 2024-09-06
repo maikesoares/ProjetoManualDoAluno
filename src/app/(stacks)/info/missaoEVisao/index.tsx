@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
+import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../../constants/colors';
 
 export default function MissaoEVisaoScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.section}>
           <View style={styles.gridIcon}>
-          <Icon name="rocket" size={30} color="#006400" style={styles.icon} />
+          <Icon name="rocket" size={30} color= {tintColorGreenDark} style={styles.icon} />
         <Text style={styles.title}>Missão</Text>
         </View>
         <Text style={styles.subTitle}>
@@ -17,7 +18,7 @@ export default function MissaoEVisaoScreen() {
       
       <View style={styles.section}>
         <View style={styles.gridIcon}>
-          <Icon name="globe" size={30} color="#006400" style={styles.icon} />
+          <Icon name="globe" size={30} color= {tintColorGreenDark} style={styles.icon} />
           <Text style={styles.title}>Visão</Text>
         </View>
         <Text style={styles.subTitle}>
@@ -31,15 +32,15 @@ export default function MissaoEVisaoScreen() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#f1f1f1', 
+    backgroundColor: tintColorBackGround, 
     padding: 20,
   },
   section: {
     marginBottom: 20,
-    backgroundColor: '#ffffff', 
+    backgroundColor: tintColorWhite, 
     borderRadius: 10,
     padding: 15,
-    shadowColor: '#000',
+    shadowColor: tintColorBlack,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
     shadowRadius: 6,
@@ -54,12 +55,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#006400', 
+    color: tintColorGreenDark, 
     marginBottom: 10,
   },
   subTitle: {
     fontSize: 16,
-    color: '#333333', 
+    color: tintColorBlack, 
     lineHeight: 24,
   },
   icon: {

@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
+
+import { tintColorWhite } from "../../../../constants/colors";
+import { servicosStyle } from "../../../../styles/serviceStyle";
 
 export default function SegurancaAlimentarScreen() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.card}>
-        <View style={styles.header}>
-          <FontAwesome name="cutlery" size={40} color="#ffffff" style={styles.icon} />
-          <Text style={styles.title}>PROGRAMA DE SEGURANÇA ALIMENTAR</Text>
+    <ScrollView contentContainerStyle={servicosStyle.container}>
+      <View style={servicosStyle.card}>
+        <View style={servicosStyle.header}>
+          <FontAwesome name="cutlery" size={40} color= {tintColorWhite} />
+          <Text style={servicosStyle.title}>PROGRAMA DE SEGURANÇA ALIMENTAR</Text>
         </View>
-        <Text style={styles.body}>
+        <Text style={servicosStyle.body}>
           Consiste no desenvolvimento de ações e serviços para implementação
           e fortalecimento da prática de Educação Alimentar e Nutricional com
           intuito de promover a segurança alimentar para a comunidade
@@ -44,44 +47,3 @@ export default function SegurancaAlimentarScreen() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    padding: 16,
-    backgroundColor: '#f1f1f1',
-  },
-  card: {
-    backgroundColor: '#ffffff',
-    borderRadius: 12,
-    padding: 16,
-    marginVertical: 8,
-    elevation: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    overflow: 'hidden',
-  },
-  header: {
-    alignItems: 'center',
-    marginBottom: 16,
-    padding: 12,
-    backgroundColor: '#004d40',
-    borderRadius: 12,
-  },
-  icon: {
-    marginBottom: 8,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#ffffff',
-  },
-  body: {
-    fontSize: 16,
-    color: '#424242',
-    lineHeight: 24,
-    textAlign: 'justify',
-  },
-});

@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
+import { tintColorBlack } from "../../constants/colors";
 
 const Welcome= () => {
   return (
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#182737',
+    color: tintColorBlack,
   },
 
   containerText: {
@@ -39,14 +40,14 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#182737',
+    color: tintColorBlack,
   },
 
   mensage: {
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '#182737',
+    color: tintColorBlack,
   },
 
 });

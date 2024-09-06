@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { tintColorBackGround, tintColorBlack, tintColorGreenLight, tintColorWhite } from '../../../../constants/colors';
 
 export default function ContatosScreen() {
   const handlePhonePress = () => {
@@ -17,7 +18,7 @@ export default function ContatosScreen() {
         <Text style={styles.title}>Contatos</Text>
 
         <View style={styles.infoContainer}>
-          <MaterialCommunityIcons name="map-marker" size={24} color="#009B77" />
+          <MaterialCommunityIcons name="map-marker" size={24} color= {tintColorGreenLight} />
           <Text style={styles.infoText}>
             Rua Humberto Mallard, 1355 - Bairro Santos Dumont
             {'\n'}Cx. Postal 54 - Pirapora/MG - CEP: 39274-140
@@ -25,12 +26,12 @@ export default function ContatosScreen() {
         </View>
 
         <TouchableOpacity style={styles.infoContainer} onPress={handlePhonePress}>
-          <MaterialCommunityIcons name="phone" size={24} color="#009B77" />
+          <MaterialCommunityIcons name="phone" size={24} color= {tintColorGreenLight} />
           <Text style={styles.infoText}>(38) 3218-7373</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.infoContainer} onPress={handleEmailPress}>
-          <MaterialCommunityIcons name="email" size={24} color="#009B77" />
+          <MaterialCommunityIcons name="email" size={24} color= {tintColorGreenLight} />
           <Text style={styles.infoText}>pirapora@ifnmg.edu.br</Text>
         </TouchableOpacity>
       </View>
@@ -41,14 +42,14 @@ export default function ContatosScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
     padding: 16,
   },
   card: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: tintColorWhite,
     borderRadius: 8,
     padding: 16,
-    shadowColor: '#000000',
+    shadowColor: tintColorBlack,
     shadowOpacity: 0.1,
     shadowRadius: 8,
     elevation: 4,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#009B77',
+    color: tintColorGreenLight,
     textAlign: 'center',
     marginBottom: 16,
   },
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 16,
     marginLeft: 8,
-    color: '#333333',
+    color: tintColorBlack,
     flex: 1,
   },
 });

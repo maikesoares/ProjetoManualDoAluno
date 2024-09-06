@@ -4,6 +4,7 @@ import { CalendarFevereiro } from '../calendar/calendarMedio2025/fevereiro';
 import { CalendarMarco } from '../calendar/calendarMedio2025/marco';
 import { CalendarAbril } from '../calendar/calendarMedio2025/abril';
 import { CalendarJaneiro } from '../calendar/calendarMedio2025/janeiro';
+import { tintColorGreenDark } from '../../constants/colors';
 
 
 const CalendarEnsinoMedio2025= () => {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
 
   container: {
     width: '100%',
-    backgroundColor: '#295c0d',
+    backgroundColor: tintColorGreenDark,
     padding: 10,
   },
 });

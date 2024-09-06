@@ -5,6 +5,7 @@ import { LegendaVerdeEscuro } from "../../legendas/verdeEscuro";
 import { LegendaVermelha } from "../../legendas/vermelho";
 import { LegendaMarrom } from "../../legendas/marrom";
 import { LegendaRosa } from "../../legendas/rosa";
+import { tintColorBackGround, tintColorBlack } from "../../../constants/colors";
 
 LocaleConfig.locales['pt-br'] = {
   monthNames: [
@@ -148,8 +149,8 @@ const styles = StyleSheet.create({
   eventosContainer: {
     marginBottom: 10,
     padding: 10,
-    borderColor: '#000000',
-    backgroundColor: '#f1f1f1',
+    borderColor: tintColorBlack,
+    backgroundColor: tintColorBackGround,
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
   },

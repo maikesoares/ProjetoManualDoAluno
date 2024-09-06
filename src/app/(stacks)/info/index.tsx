@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
 
 export default function InfoGeraisScreen() {
 
@@ -57,17 +58,17 @@ const styles = StyleSheet.create({
     flex: 1, 
     alignItems: 'center', 
     justifyContent: 'center',
-    backgroundColor: '#f1f1f1', // Cor de fundo clara
+    backgroundColor: tintColorBackGround, 
   },
 
   gridItem: {
-    backgroundColor: '#ffffff', // Branco
+    backgroundColor: tintColorWhite, 
     borderRadius: 10,
     padding: 20,
     alignItems: 'center',
     marginBottom: 20,
     width: '80%',
-    shadowColor: '#000',
+    shadowColor: tintColorBlack,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -79,10 +80,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#000000', // Verde
+    color: tintColorBlack, 
   },
 
   icon: {
-    color: '#004d40', // Verde
+    color: tintColorGreenDark,
   },
 });

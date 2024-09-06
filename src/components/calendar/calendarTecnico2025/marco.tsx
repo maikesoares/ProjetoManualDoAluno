@@ -10,6 +10,7 @@ import { LegendaLaranja } from "../../legendas/laranja";
 import { LegendaVerdeEscuro } from "../../legendas/verdeEscuro";
 import { LegendaRosa } from "../../legendas/rosa";
 import { LegendaMarrom } from "../../legendas/marrom";
+import { tintColorBackGround, tintColorBlack } from "../../../constants/colors";
 
 type EventPeriod = {
   startingDay?: boolean;
@@ -132,8 +133,8 @@ const styles = StyleSheet.create({
   eventosContainer: {
     marginBottom: 10,
     padding: 10,
-    borderColor: '#000000',
-    backgroundColor: '#f1f1f1',
+    borderColor: tintColorBlack,
+    backgroundColor: tintColorBackGround,
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
   },

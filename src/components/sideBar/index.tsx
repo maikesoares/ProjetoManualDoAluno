@@ -4,6 +4,8 @@ import { menuItems } from '../../data/menuItems';
 import { MenuItem } from '../../types/types';
 import MenuItemComponent from '../menuItem';
 
+import { tintColorBackGround } from '../../constants/colors';
+
 interface SidebarProps {
   animatedValue: Animated.Value;
   isOpen: boolean;
@@ -46,7 +48,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     width: width * 0.75,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
     padding: 20,
     justifyContent: 'space-between',
     zIndex: 10,

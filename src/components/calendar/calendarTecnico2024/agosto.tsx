@@ -4,6 +4,7 @@ import { Calendar } from "react-native-calendars";
 import { LegendaAmarela } from "../../legendas/amarelo";
 import { LegendaAzul } from "../../legendas/azul";
 import { LegendaVerdeClaro } from "../../legendas/verdeClaro";
+import { tintColorBackGround } from "../../../constants/colors";
 
 type EventPeriod = {
   startingDay?: boolean;
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
 
   eventosContainer: {
     padding: 10,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
   },

@@ -7,6 +7,7 @@ import { LegendaMarrom } from "../../legendas/marrom";
 import { LegendaAmarela } from "../../legendas/amarelo";
 import { LegendaRosa } from "../../legendas/rosa";
 import { LegendaRoxa } from "../../legendas/roxo";
+import { tintColorBackGround } from "../../../constants/colors";
 
 type EventPeriod = {
   startingDay?: boolean;
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
 
   eventosContainer: {
     padding: 10,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
   },

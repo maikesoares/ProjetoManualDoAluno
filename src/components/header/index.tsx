@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { tintColorBlack } from '../../constants/colors';
 
 interface HeaderProps {
   toggleMenu: () => void;
@@ -15,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
         accessibilityLabel="Abrir menu"
         accessibilityHint="Pressione para abrir ou fechar o menu lateral."
       >
-        <Icon name="align-justify" size={24} color="#000000" />
+        <Icon name="align-justify" size={24} color={tintColorBlack} />
       </TouchableOpacity>
       <Text style={styles.headerTitle}>Manual do Aluno</Text>
     </View>
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#000000',
+    color: tintColorBlack,
   },
 
 })

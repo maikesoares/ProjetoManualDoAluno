@@ -2,6 +2,7 @@ import { router } from "expo-router";
 import React from "react";
 import { ScrollView, TouchableOpacity, Text, StyleSheet } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { tintColorBlack, tintColorWhite } from "../../constants/colors";
 
 const GridItems: React.FC = () => {
 
@@ -33,7 +34,7 @@ const GridItems: React.FC = () => {
           accessibilityLabel="Informações"
           accessibilityHint="Pressione para acessar informações gerais."
         >
-          <Icon name="cogs" size={50} color="#000" />
+          <Icon name="cogs" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Informações...</Text>
         </TouchableOpacity>
 
@@ -43,7 +44,7 @@ const GridItems: React.FC = () => {
           accessibilityLabel="Políticas"
           accessibilityHint="Pressione para acessar políticas acadêmicas."
         >
-          <Icon name="graduation-cap" size={50} color="#000" />
+          <Icon name="graduation-cap" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Políticas...</Text>
         </TouchableOpacity>
 
@@ -53,7 +54,7 @@ const GridItems: React.FC = () => {
           accessibilityLabel="Recursos"
           accessibilityHint="Pressione para acessar recursos acadêmicos."
         >
-          <Icon name="university" size={50} color="#000" />
+          <Icon name="university" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Recursos...</Text>
         </TouchableOpacity>
 
@@ -63,7 +64,7 @@ const GridItems: React.FC = () => {
           accessibilityLabel="Calendário"
           accessibilityHint="Pressione para acessar o calendário acadêmico."
         >
-          <Icon name="calendar-check-o" size={50} color="#000" />
+          <Icon name="calendar-check-o" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Calendário...</Text>
         </TouchableOpacity>
 
@@ -73,7 +74,7 @@ const GridItems: React.FC = () => {
           accessibilityLabel="Serviços de Apoio"
           accessibilityHint="Pressione para acessar serviços de apoio."
         >
-          <Icon name="handshake-o" size={50} color="#000" />
+          <Icon name="handshake-o" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Serviços de Apoio...</Text>
         </TouchableOpacity>
       </ScrollView>
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
   },
 
   gridItem: {
-    backgroundColor: '#fff',
+    backgroundColor: tintColorWhite,
     borderRadius: 10,
     padding: 20,
     alignItems: 'center',
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#333',
+    color: tintColorBlack,
   },
 })
 

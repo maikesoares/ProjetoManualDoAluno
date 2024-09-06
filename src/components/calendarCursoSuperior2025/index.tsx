@@ -5,6 +5,7 @@ import { CalendarFevereiro } from '../calendar/calendarSuperior2025/fevereiro';
 import { CalendarMarco } from '../calendar/calendarSuperior2025/marco';
 import { CalendarAbril } from '../calendar/calendarSuperior2025/abril';
 import { CalendarMaio } from '../calendar/calendarSuperior2025/maio';
+import { tintColorGreenDark } from '../../constants/colors';
 
 const CalendarCursoSuperior2025= () => {
 
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
 
   container: {
     width: '100%',
-    backgroundColor: '#295c0d',
+    backgroundColor: tintColorGreenDark,
     padding: 10,
   },
 });

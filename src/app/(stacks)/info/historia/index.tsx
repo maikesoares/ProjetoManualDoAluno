@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorGreenLight, tintColorWhite } from '../../../../constants/colors';
 
 export default function HistoriaScreen() {
   return (
@@ -39,13 +40,13 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: tintColorWhite,
     borderRadius: 10,
     padding: 20,
-    shadowColor: '#000',
+    shadowColor: tintColorBlack,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 8,
@@ -54,11 +55,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#004d00',
+    color: tintColorGreenLight,
     marginBottom: 16,
     textAlign: 'center',
     borderBottomWidth: 2,
-    borderBottomColor: '#004d00',
+    borderBottomColor: tintColorGreenDark,
     paddingBottom: 10,
   },
   section: {
@@ -67,13 +68,13 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#006400',
+    color: tintColorGreenLight,
     marginBottom: 8,
   },
   text: {
     fontSize: 16,
     lineHeight: 24,
     textAlign: 'justify',
-    color: '#333',
+    color: tintColorBlack,
   },
 });
