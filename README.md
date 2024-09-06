@@ -1,39 +1,47 @@
-# Projeto API do GitHub
+# Projeto Manual do Aluno - IFNMG - Campus Pirapora (TCC II)
 
-Quest JavaScrip Avançado - API do GitHub 👨‍💻🐱‍🏍
+O presente trabalho tem como objetivo demonstrar a utilização do React Native na criação de aplicativos mobile, desenvolvendo uma aplicação multiplataforma focada em oferecer uma interface intuitiva e prática, que possa auxiliar os alunos da instituição a se manterem informados sobre seus direitos e deveres trazendo consigo a permanência e êxito dos estudantes dentro do campus.
 
-[<img src="./src/img/projeto-api-gitgub.gif" alt="gif da tela inicial do projeto API do GitHub">](https://maikesoares.github.io/ProjetoOnePiece/)
+## Telas da aplicação:
 
-## Solicitações dentro da API:
+[<img src="./src/app/assets/projetoManualDoAluno.gif" alt="gif da tela inicial do projeto Manual do Aluno">](https://github.com/maikesoares/ProjetoManualDoAluno)
+
+## Requisitos do projeto:
+
+Os requisitos listados a seguir surgiram a partir da ideia principal do aplicativo e
+do que ele poderia ser futuramente. Sendo que para este feito foi realizada conversas com
+membros do instituto, para que pudessem ser repassadas a regularidade das informações
+que seram apresentadas inicialmente, sendo elas:
 
 # Primeiro:
 
-- BuscarImagem do usuário
-- Nome completo do usuário
-- Login do usuário
-- Bio do usuário
-
-- Número de seguidores do usuário
-- Número de pessoas que o usuário está seguindo
+1. Informações Gerais do Campus: apresentar qual a missão e visão do instituição, a
+   história por trás do campus e seus contatos principais.
 
 # Segundo:
 
-- Apresentar na tela uma lista com até
-  10 últimos eventos do usuário no GitHub. Os
-  eventos que serão apresentados são de dois
-  tipos: CreateEvent e PushEvent apenas.
-  Para cada atividade você deve mostrar o nome
-  do repositório e a mensagem do evento.
+2. Politícas Acadêmicas: apresentar as principais políticas existentes dentro do campus.
 
-# Terceiro e último:
+# Terceiro:
 
-- Quantidade de forks do repositório
-- Quantidade de estrelas do repositório
-- Quantidade de watchers do repositório
-- Mostrar a linguagem de programação do repositório
+3. Recursos Acadêmicos: descrever sobre a utilização da biblioteca e dos laboratórios
+   presentes no instituto.
+
+# Quarto:
+
+4. Serviços de Apoio ao Estudante: Informar ao estudante sobre a política de assistência
+   estudantil que o campus fornece.
+
+# Quinto:
+
+5. Calendário Acadêmico: a aplicação deve apresentar o calendário acadêmico referente
+   ao ano letivo de 2024 e 2025 do ensino superior, ensino médio e curso técnico,
+   contendo todos os eventos de cada mês.
 
 ## Teclonogias utilizadas :
 
 - HTML
 - CSS
-- JS
+- TS
+- React
+- React Native
