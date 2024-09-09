@@ -7,7 +7,7 @@ const Welcome= () => {
     <>
       <Text style={styles.title}>Manual do Aluno</Text>
       <View style={styles.containerText}>
-        <Image source= {require('../../app/assets/logo.png')}/>
+        <Image source= {require('../../../assets/logo.png')}/>
         <Text style={styles.subtitle}>
           Bem-vindo(a)
         </Text>

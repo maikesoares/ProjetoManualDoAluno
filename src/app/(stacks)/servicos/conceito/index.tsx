@@ -39,7 +39,7 @@ export default function ConceitoScreen(){
 
       <View style={servicosStyle.footer}>
         <Image
-          source={require('../../../assets/logo.png')} 
+          source={require('../../../../../assets/logo.png')} 
           style={servicosStyle.logo}
         />
         <Text style={servicosStyle.footerText}>
