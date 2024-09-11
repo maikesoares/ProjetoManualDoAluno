@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import { MaterialIcons} from '@expo/vector-icons'
+import { tintColorBlack, tintColorGreenDark } from "../../../constants/colors";
 
 export default function TabRoutesLayout() {
   return (
@@ -9,8 +10,8 @@ export default function TabRoutesLayout() {
         options={{
           title: "Calendário",
           tabBarIcon: ({size, color}) => <MaterialIcons name="calendar-today" size={size} color={color} />,
-          tabBarActiveTintColor: '#004d40',
-          tabBarInactiveTintColor: 'grey',
+          tabBarActiveTintColor: tintColorGreenDark,
+          tabBarInactiveTintColor: tintColorBlack,
         }}
       />
 
@@ -19,18 +20,18 @@ export default function TabRoutesLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({color}) => <MaterialIcons name="home" size={32} color={color} />,
-          tabBarActiveTintColor: '#004d40',
-          tabBarInactiveTintColor: 'grey',
+          tabBarActiveTintColor: tintColorGreenDark,
+          tabBarInactiveTintColor: tintColorBlack,
         }}
       />
 
       <Tabs.Screen 
-        name="politics" 
+        name="recursos" 
         options={{
-          title: "Politicas",
+          title: "Recursos",
           tabBarIcon: ({size, color}) => <MaterialIcons name="support" size={size} color={color} />,
-          tabBarActiveTintColor: '#004d40',
-          tabBarInactiveTintColor: 'grey',
+          tabBarActiveTintColor: tintColorGreenDark,
+          tabBarInactiveTintColor: tintColorBlack,
         }}
       />
     </Tabs>

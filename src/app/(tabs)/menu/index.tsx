@@ -4,6 +4,7 @@ import Header from '../../../components/header';
 import useMenuToggle from '../../../hooks/useMenuToggle';
 import Sidebar from '../../../components/sideBar';
 import GridItems from '../../../components/gridItems';
+import { tintColorBackGround } from '../../../constants/colors';
 
 
 const HomeScreen: React.FC = () => {
@@ -28,7 +29,7 @@ const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: tintColorBackGround,
     padding: 20,
     marginTop: 30,
     gap: 10,

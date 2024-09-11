@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
+import { Recursos } from "../../../components/recursos";
 
-export default function PoliticsScreen() {
+export default function RecursosScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Politicas</Text>
+      <Recursos />
     </View>
   )
 }

@@ -10,6 +10,20 @@ export default function StackRoutesRecursos() {
         }}
       />
 
+      <Stack.Screen 
+        name="biblioteca"
+        options={{
+          title: 'Biblioteca'
+        }}
+      />
+
+      <Stack.Screen 
+        name="laboratorio"
+        options={{
+          title: 'Laboratório'
+        }}
+      />
+
       </Stack>
     
   )

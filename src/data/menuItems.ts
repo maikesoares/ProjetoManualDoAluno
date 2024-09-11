@@ -22,21 +22,101 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: '2',
-    title: 'Políticas Acadêmicas',
+    title: 'Serviços de Apoio',
     subItems: [
-      { id: '2-1', title: 'Regras de Matrícula' },
-      { id: '2-2', title: 'Frequência' },
+      { id: '2-1', 
+        title: 'Conceito',
+        onPress: () => router.push('/(stacks)/servicos/conceito') 
+      },
+      { id: '2-2', 
+        title: 'Moradia Estudantil',
+        onPress: () => router.push('/(stacks)/servicos/moradiaEstudantil') 
+      },
+      { id: '2-3', 
+        title: 'Assistência e Apoio',
+        onPress: () => router.push('/(stacks)/servicos/apoioAoEstudante') 
+      },
+      { id: '2-4', 
+        title: 'Segurança Alimentar',
+        onPress: () => router.push('/(stacks)/servicos/segurancaAlimentar') 
+      },
+      { id: '2-5', 
+        title: 'Inclusão Digital',
+        onPress: () => router.push('/(stacks)/servicos/inclusaoDigital') 
+      },
+      { id: '2-6', 
+        title: 'Creche - Escola',
+        onPress: () => router.push('/(stacks)/servicos/crecheEscola') 
+      },
+      { id: '2-7', 
+        title: 'Educação a Diversidade',
+        onPress: () => router.push('/(stacks)/servicos/educacaoDiversidade') 
+      },
+      { id: '2-8', 
+        title: 'Necessidades Específicas',
+        onPress: () => router.push('/(stacks)/servicos/necessidadesEspecificas') 
+      },
+      { id: '2-9', 
+        title: 'Atenção a Saúde',
+        onPress: () => router.push('/(stacks)/servicos/atencaoASaude') 
+      },
+      { id: '2-10', 
+        title: 'Apoio Psicológico',
+        onPress: () => router.push('/(stacks)/servicos/apoioPsicologico') 
+      },
+      { id: '2-11', 
+        title: 'Acompanhamento Social',
+        onPress: () => router.push('/(stacks)/servicos/acompanhamentoSocial') 
+      },
+      { id: '2-12', 
+        title: 'Incentivo ao Esporte',
+        onPress: () => router.push('/(stacks)/servicos/esporteELazer') 
+      },
+      { id: '2-13', 
+        title: 'Educação Artística',
+        onPress: () => router.push('/(stacks)/servicos/educacaoArtisticaECultural') 
+      },
+      { id: '2-14', 
+        title: 'Programa Renovar',
+        onPress: () => router.push('/(stacks)/servicos/programaRenovar') 
+      },
+      { id: '2-15', 
+        title: 'Integração Dos Estudantes',
+        onPress: () => router.push('/(stacks)/servicos/integracaoDosEstudantes') 
+      },
+      { id: '2-16', 
+        title: 'Formação à Cidadania',
+        onPress: () => router.push('/(stacks)/servicos/incentivoACidadania') 
+      },
+      { id: '2-17', 
+        title: 'Participação à Eventos',
+        onPress: () => router.push('/(stacks)/servicos/participacaoAEventos') 
+      },
+      { id: '2-18', 
+        title: 'Auxílio Emergencial',
+        onPress: () => router.push('/(stacks)/servicos/auxilioEmergencial') 
+      },
+      { id: '2-19', 
+        title: 'Mobilidade Acadêmica',
+        onPress: () => router.push('/(stacks)/servicos/mobilidadeAcademica') 
+      },
+      { id: '2-20', 
+        title: 'Pesquisa e Extensão',
+        onPress: () => router.push('/(stacks)/servicos/pesquisaEExtensao') 
+      },
     ],
   },
   {
     id: '3',
     title: 'Recursos Acadêmicos',
     subItems: [
-      { id: '3-1', title: 'Biblioteca' },
-      { id: '3-2', title: 'Laboratórios' },
-      { id: '3-3', 
-        title: 'Serviços de Apoio ao Estudante',
-        onPress: () => router.push('/(stacks)/servicos') 
+      { id: '3-1', 
+        title: 'Biblioteca',
+        onPress: () => router.push('/(stacks)/recursos/biblioteca')
+       },
+      { id: '3-2', 
+        title: 'Laboratórios',
+        onPress: () => router.push('/(stacks)/recursos/laboratorio') 
       },
     ],
   },

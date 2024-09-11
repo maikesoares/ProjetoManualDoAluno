@@ -14,12 +14,8 @@ const GridItems: React.FC = () => {
     router.push('/(stacks)/info');
   };
 
-  const handleNavigatePoliticas = () => {
-    router.push('/(tabs)/menu/politics');
-  };
-
   const handleNavigateRecursos = () => {
-    router.push('/(stacks)/recursos');
+    router.push('/(tabs)/menu/recursos');
   };
 
   const handleNavigateServicos = () => {
@@ -36,16 +32,6 @@ const GridItems: React.FC = () => {
         >
           <Icon name="cogs" size={50} color= {tintColorBlack} />
           <Text style={styles.gridText}>Informações...</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.gridItem}
-          onPress={handleNavigatePoliticas}
-          accessibilityLabel="Políticas"
-          accessibilityHint="Pressione para acessar políticas acadêmicas."
-        >
-          <Icon name="graduation-cap" size={50} color= {tintColorBlack} />
-          <Text style={styles.gridText}>Políticas...</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
