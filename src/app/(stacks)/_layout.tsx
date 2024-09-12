@@ -25,13 +25,6 @@ export default function StackRoutesLayout() {
       />
 
       <Stack.Screen 
-        name="politicas"
-        options={{
-          title: "Políticas Acadêmicas",
-        }}
-      />
-
-      <Stack.Screen 
         name="recursos"
         options={{
           title: "Recursos Acadêmicos",

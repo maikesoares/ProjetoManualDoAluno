@@ -26,7 +26,7 @@ export default function InfoGeraisScreen() {
         activeOpacity={0.7}
         accessibilityLabel="Missão e Visão da Instituição"
       >
-        <FontAwesome name="star" size={24} color={styles.icon.color} />
+        <FontAwesome name="star" size={32} color={styles.icon.color} />
         <Text style={styles.gridText}>Missão e Visão da Instituição</Text>
       </TouchableOpacity>
 
@@ -36,7 +36,7 @@ export default function InfoGeraisScreen() {
         activeOpacity={0.7}
         accessibilityLabel="História da Instituição"
       >
-        <FontAwesome name="book" size={24} color={styles.icon.color} />
+        <FontAwesome name="book" size={32} color={styles.icon.color} />
         <Text style={styles.gridText}>História da Instituição</Text>
       </TouchableOpacity>
 
@@ -46,7 +46,7 @@ export default function InfoGeraisScreen() {
         activeOpacity={0.7}
         accessibilityLabel="Contatos Principais"
       >
-        <FontAwesome name="phone" size={24} color={styles.icon.color} />
+        <FontAwesome name="phone" size={32} color={styles.icon.color} />
         <Text style={styles.gridText}>Contatos Principais</Text>
       </TouchableOpacity>
     </View>
@@ -62,23 +62,25 @@ const styles = StyleSheet.create({
   },
 
   gridItem: {
-    backgroundColor: tintColorWhite, 
-    borderRadius: 10,
+    backgroundColor: tintColorWhite,
+    borderRadius: 15,
     padding: 20,
     alignItems: 'center',
     marginBottom: 20,
     width: '80%',
     shadowColor: tintColorBlack,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: tintColorGreenDark,
   },
 
   gridText: {
     marginTop: 10,
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 18,
+    fontWeight: '600',
     textAlign: 'center',
     color: tintColorBlack, 
   },

@@ -25,24 +25,27 @@ export const servicosStyle = StyleSheet.create({
     padding: 12,
     backgroundColor: tintColorGreenDark,
     borderRadius: 12,
-    gap: 10
+    gap: 10,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     color: tintColorWhite, 
     marginLeft: 8,
-    textAlign: 'center'
+    textAlign: 'center',
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   body: {
-    fontSize: 16,
+    fontSize: 18,
     color: tintColorBlack, 
     lineHeight: 24,
     textAlign: 'justify',
   },
 
   bodyText: {
-    fontSize: 16,
+    fontSize: 18,
     color: tintColorBlack, 
     lineHeight: 24,
     textAlign: 'justify', 
@@ -53,6 +56,9 @@ export const servicosStyle = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     marginTop: 10,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   iconsRow: {
     flexDirection: 'row',
@@ -64,7 +70,7 @@ export const servicosStyle = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'justify',
   },
   footer: {

@@ -234,6 +234,9 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 5,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   subHeading: {
     fontSize: 22,
@@ -245,6 +248,9 @@ const styles = StyleSheet.create({
     backgroundColor: tintColorGreenDarkOpacity,
     paddingVertical: 10,
     borderRadius: 8,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   paragraph: {
     fontSize: 18,

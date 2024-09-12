@@ -4,35 +4,7 @@ import { Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
-
-type FontAwesomeIconName =
-  | 'newspaper-o'
-  | 'home'
-  | 'users'
-  | 'cutlery'
-  | 'laptop'
-  | 'building'
-  | 'globe'
-  | 'wheelchair'
-  | 'heart'
-  | 'heartbeat'
-  | 'soccer-ball-o'
-  | 'paint-brush'
-  | 'refresh'
-  | 'link'
-  | 'flag'
-  | 'calendar'
-  | 'plus-square'
-  | 'search'
-  | 'weixin'
-  | 'plane'
-  ;
-
-interface Service {
-  name: string;
-  label: string;
-  icon: FontAwesomeIconName;
-}
+import { Service } from '../../../types/types';
 
 const services: Service[] = [
   { name: 'conceito', label: 'CONCEITO', icon: 'newspaper-o' },
@@ -73,7 +45,7 @@ export default function ServicosScreen() {
           activeOpacity={0.7}
           accessibilityLabel={service.label}
         >
-          <FontAwesome name={service.icon} size={24} color={styles.icon.color} />
+          <FontAwesome name={service.icon} size={32} color={styles.icon.color} />
           <Text style={styles.gridText}>{service.label}</Text>
         </TouchableOpacity>
       ))}
@@ -85,37 +57,52 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 16,
-    backgroundColor: tintColorBackGround, 
+    backgroundColor: tintColorBackGround,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   header: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: tintColorGreenDark,
+    color: tintColorWhite,
     marginBottom: 20,
     textAlign: 'center',
+    backgroundColor: tintColorGreenDark,
+    padding: 12,
+    borderRadius: 10,
+    shadowColor: tintColorBlack,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 4,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
 
   gridItem: {
-    backgroundColor: tintColorWhite, 
-    borderRadius: 12,
-    padding: 16,
+    backgroundColor: tintColorWhite,
+    borderRadius: 20,
+    padding: 24,
     alignItems: 'center',
-    marginBottom: 15,
-    width: '100%',
+    marginBottom: 20,
+    width: '90%',
     shadowColor: tintColorBlack,
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
-    shadowRadius: 6,
+    shadowRadius: 8,
     elevation: 4,
+    borderWidth: 1,
+    borderColor: tintColorGreenDark,
   },
 
   gridText: {
-    marginTop: 10,
-    fontSize: 16,
-    fontWeight: 'bold',
+    marginTop: 12,
+    fontSize: 18,
+    fontWeight: '600',
     textAlign: 'center',
-    color: tintColorBlack, 
+    color: tintColorBlack,
   },
 
   icon: {

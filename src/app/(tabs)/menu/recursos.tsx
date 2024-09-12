@@ -1,5 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import { Recursos } from "../../../components/recursos";
+import { tintColorBackGround } from "../../../constants/colors";
 
 export default function RecursosScreen() {
   return (
@@ -12,13 +13,8 @@ export default function RecursosScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: tintColorBackGround,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  title: {
-    fontSize: 44,
-    fontWeight: 'bold',
   },
 });
