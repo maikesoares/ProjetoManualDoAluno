@@ -1,10 +1,12 @@
 import { router } from 'expo-router';
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
+import { tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
 
 export default function InfoGeraisScreen() {
+
+  const backgroundImage = require('../../../../assets/backGroundSecundario.png');
 
   const handleNavigateMissaoEVisao = () => {
     router.push('/(stacks)/info/missaoEVisao');
@@ -19,46 +21,54 @@ export default function InfoGeraisScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.gridItem}
-        onPress={handleNavigateMissaoEVisao}
-        activeOpacity={0.7}
-        accessibilityLabel="Missão e Visão da Instituição"
-      >
-        <FontAwesome name="star" size={32} color={styles.icon.color} />
-        <Text style={styles.gridText}>Missão e Visão da Instituição</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.gridItem}
-        onPress={handleNavigateHistoria}
-        activeOpacity={0.7}
-        accessibilityLabel="História da Instituição"
-      >
-        <FontAwesome name="book" size={32} color={styles.icon.color} />
-        <Text style={styles.gridText}>História da Instituição</Text>
-      </TouchableOpacity>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.gridItem}
+          onPress={handleNavigateMissaoEVisao}
+          activeOpacity={0.7}
+          accessibilityLabel="Missão e Visão da Instituição"
+        >
+          <FontAwesome name="star" size={32} color={styles.icon.color} />
+          <Text style={styles.gridText}>Missão e Visão da Instituição</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.gridItem}
-        onPress={handleNavigateContatos}
-        activeOpacity={0.7}
-        accessibilityLabel="Contatos Principais"
-      >
-        <FontAwesome name="phone" size={32} color={styles.icon.color} />
-        <Text style={styles.gridText}>Contatos Principais</Text>
-      </TouchableOpacity>
-    </View>
+        <TouchableOpacity
+          style={styles.gridItem}
+          onPress={handleNavigateHistoria}
+          activeOpacity={0.7}
+          accessibilityLabel="História da Instituição"
+        >
+          <FontAwesome name="book" size={32} color={styles.icon.color} />
+          <Text style={styles.gridText}>História da Instituição</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.gridItem}
+          onPress={handleNavigateContatos}
+          activeOpacity={0.7}
+          accessibilityLabel="Contatos Principais"
+        >
+          <FontAwesome name="phone" size={32} color={styles.icon.color} />
+          <Text style={styles.gridText}>Contatos Principais</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 };
 
-const styles = StyleSheet.create({  
+const styles = StyleSheet.create({
+  backgroundImage: {
+    width: '100%',
+    flex: 1,
+    resizeMode: 'cover',
+  },  
+
   container: {
     flex: 1, 
     alignItems: 'center', 
     justifyContent: 'center',
-    backgroundColor: tintColorBackGround, 
   },
 
   gridItem: {

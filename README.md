@@ -4,7 +4,7 @@ O presente trabalho tem como objetivo demonstrar a utilização do React Native 
 
 ## Telas da aplicação:
 
-[<img src="./src/app/assets/projetoManualDoAluno.gif" alt="gif da tela inicial do projeto Manual do Aluno">](https://github.com/maikesoares/ProjetoManualDoAluno)
+[<img src="./assets/projetoManualDoAluno.gif" alt="gif da tela inicial do projeto Manual do Aluno">](https://github.com/maikesoares/ProjetoManualDoAluno)
 
 ## Requisitos do projeto:
 

@@ -82,11 +82,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
     width: '48%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 5,
   },
 
   gridText: {
     marginTop: 10,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
     color: tintColorBlack,

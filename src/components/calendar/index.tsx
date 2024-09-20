@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { router } from "expo-router";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from "../../constants/colors";
+import { tintColorBlack, tintColorGreenDark, tintColorWhite } from "../../constants/colors";
 
 const CalendarAcademico = () => {
+  
+  const backgroundImage = require('../../../assets/backGroundSecundario.png');
 
   const handleCalendarSuperior2024 = () => {
     router.push('/(stacks)/calendar2024/superior')
@@ -31,57 +33,64 @@ const CalendarAcademico = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.gridCalendar}>
-        <Text style={styles.title}>CALENDÁRIO ACADÊMICO ANO LETIVO 2024 - PÓS- GREVE</Text>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <View style={styles.gridCalendar}>
+          <Text style={styles.title}>CALENDÁRIO ACADÊMICO ANO LETIVO 2024 - PÓS- GREVE</Text>
 
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarSuperior2024}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Ensino Superior</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarSuperior2024}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Ensino Superior</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarTecnico2024}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Curso Técnico</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarTecnico2024}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Curso Técnico</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarMedio2024}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Ensino Médio</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarMedio2024}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Ensino Médio</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.gridCalendar}>
+          <Text style={styles.title}>CALENDÁRIO ACADÊMICO ANO LETIVO 2025</Text>
+
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarSuperior2025}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Ensino Superior</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarTecnico2025}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Curso Técnico</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.gridItem} onPress={handleCalendarMedio2025}>
+            <Icon name="calendar" size={24} color= {tintColorWhite} />
+            <Text style={styles.gridText}>Ensino Médio</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-
-      <View style={styles.gridCalendar}>
-        <Text style={styles.title}>CALENDÁRIO ACADÊMICO ANO LETIVO 2025</Text>
-
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarSuperior2025}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Ensino Superior</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarTecnico2025}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Curso Técnico</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.gridItem} onPress={handleCalendarMedio2025}>
-          <Icon name="calendar" size={24} color= {tintColorWhite} />
-          <Text style={styles.gridText}>Ensino Médio</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </ImageBackground>
   )
 }
 
 export { CalendarAcademico }
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    width: '100%',
+    flex: 1,
+    resizeMode: 'cover',
+  },
+
   container: {
     flex: 1,
-    padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: tintColorBackGround,
+    padding: 10,
   },
 
   gridCalendar: {

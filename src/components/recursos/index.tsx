@@ -1,10 +1,12 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, View, ImageBackground } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../constants/colors';
 import { router } from 'expo-router';
 
 const Recursos = () => {
+
+  const backgroundImage = require('../../../assets/backGroundSecundario.png');
 
   const handleNavigateBiblioteca = () => {
     router.push('/(stacks)/recursos/biblioteca');
@@ -15,33 +17,41 @@ const Recursos = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.gridItem}
-        onPress={handleNavigateBiblioteca}
-        activeOpacity={0.7}
-        accessibilityLabel="Biblioteca"
-      >
-        <FontAwesome5 name="book" size={32} color={styles.icon.color} />
-        <Text style={styles.gridText}>Biblioteca</Text>
-      </TouchableOpacity>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.gridItem}
+          onPress={handleNavigateBiblioteca}
+          activeOpacity={0.7}
+          accessibilityLabel="Biblioteca"
+        >
+          <FontAwesome5 name="book" size={32} color={styles.icon.color} />
+          <Text style={styles.gridText}>Biblioteca</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.gridItem}
-        onPress={handleNavigateLaboratorio}
-        activeOpacity={0.7}
-        accessibilityLabel="Laboratórios"
-      >
-        <FontAwesome5 name="desktop" size={32} color={styles.icon.color} />
-        <Text style={styles.gridText}>Laboratórios</Text>
-      </TouchableOpacity>
-    </View>
+        <TouchableOpacity
+          style={styles.gridItem}
+          onPress={handleNavigateLaboratorio}
+          activeOpacity={0.7}
+          accessibilityLabel="Laboratórios"
+        >
+          <FontAwesome5 name="desktop" size={32} color={styles.icon.color} />
+          <Text style={styles.gridText}>Laboratórios</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 };
 
 export { Recursos };
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    width: '100%',
+    flex: 1,
+    resizeMode: 'cover',
+  },
+
   container: {
     width: '100%',
     flex: 1,

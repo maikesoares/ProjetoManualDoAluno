@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 import { tintColorBackGround, tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
@@ -30,34 +30,42 @@ const services: Service[] = [
 ];
 
 export default function ServicosScreen() {
+  const backgroundImage = require('../../../../assets/backGroundSecundario.png');
+
   const handleNavigate = (path:string) => {
     router.push(`../(stacks)/servicos/${path}`);
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Assistência Estudantil</Text>
-      {services.map((service) => (
-        <TouchableOpacity
-          key={service.name}
-          style={styles.gridItem}
-          onPress={() => handleNavigate(service.name)}
-          activeOpacity={0.7}
-          accessibilityLabel={service.label}
-        >
-          <FontAwesome name={service.icon} size={32} color={styles.icon.color} />
-          <Text style={styles.gridText}>{service.label}</Text>
-        </TouchableOpacity>
-      ))}
-    </ScrollView>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <Text style={styles.header}>Assistência Estudantil</Text>
+        {services.map((service) => (
+          <TouchableOpacity
+            key={service.name}
+            style={styles.gridItem}
+            onPress={() => handleNavigate(service.name)}
+            activeOpacity={0.7}
+            accessibilityLabel={service.label}
+          >
+            <FontAwesome name={service.icon} size={32} color={styles.icon.color} />
+            <Text style={styles.gridText}>{service.label}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  backgroundImage: {
+    width: '100%',
     flexGrow: 1,
+    resizeMode: 'cover',
+  },
+
+  container: {
     padding: 16,
-    backgroundColor: tintColorBackGround,
     alignItems: 'center',
     justifyContent: 'center',
   },
