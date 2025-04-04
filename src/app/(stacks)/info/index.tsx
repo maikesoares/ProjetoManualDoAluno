@@ -1,11 +1,20 @@
 import { router } from 'expo-router';
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ImageBackground,
+} from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import { tintColorBlack, tintColorGreenDark, tintColorWhite } from '../../../constants/colors';
+import {
+  tintColorBlack,
+  tintColorGreenDark,
+  tintColorWhite,
+} from '../../../constants/colors';
 
 export default function InfoGeraisScreen() {
-
   const backgroundImage = require('../../../../assets/backGroundSecundario.png');
 
   const handleNavigateMissaoEVisao = () => {
@@ -21,7 +30,6 @@ export default function InfoGeraisScreen() {
   };
 
   return (
-
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <View style={styles.container}>
         <TouchableOpacity
@@ -56,18 +64,18 @@ export default function InfoGeraisScreen() {
       </View>
     </ImageBackground>
   );
-};
+}
 
 const styles = StyleSheet.create({
   backgroundImage: {
     width: '100%',
     flex: 1,
     resizeMode: 'cover',
-  },  
+  },
 
   container: {
-    flex: 1, 
-    alignItems: 'center', 
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
   },
 
@@ -92,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
-    color: tintColorBlack, 
+    color: tintColorBlack,
   },
 
   icon: {

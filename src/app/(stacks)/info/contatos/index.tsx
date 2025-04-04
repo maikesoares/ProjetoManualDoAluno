@@ -1,7 +1,19 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  Linking,
+} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { tintColorBackGround, tintColorBlack, tintColorGreenLight, tintColorWhite } from '../../../../constants/colors';
+import {
+  tintColorBackGround,
+  tintColorBlack,
+  tintColorGreenLight,
+  tintColorWhite,
+} from '../../../../constants/colors';
 
 export default function ContatosScreen() {
   const handlePhonePress = () => {
@@ -18,20 +30,38 @@ export default function ContatosScreen() {
         <Text style={styles.title}>Contatos</Text>
 
         <View style={styles.infoContainer}>
-          <MaterialCommunityIcons name="map-marker" size={24} color= {tintColorGreenLight} />
+          <MaterialCommunityIcons
+            name="map-marker"
+            size={24}
+            color={tintColorGreenLight}
+          />
           <Text style={styles.infoText}>
             Rua Humberto Mallard, 1355 - Bairro Santos Dumont
             {'\n'}Cx. Postal 54 - Pirapora/MG - CEP: 39274-140
           </Text>
         </View>
 
-        <TouchableOpacity style={styles.infoContainer} onPress={handlePhonePress}>
-          <MaterialCommunityIcons name="phone" size={24} color= {tintColorGreenLight} />
+        <TouchableOpacity
+          style={styles.infoContainer}
+          onPress={handlePhonePress}
+        >
+          <MaterialCommunityIcons
+            name="phone"
+            size={24}
+            color={tintColorGreenLight}
+          />
           <Text style={styles.infoText}>(38) 3218-7373</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.infoContainer} onPress={handleEmailPress}>
-          <MaterialCommunityIcons name="email" size={24} color= {tintColorGreenLight} />
+        <TouchableOpacity
+          style={styles.infoContainer}
+          onPress={handleEmailPress}
+        >
+          <MaterialCommunityIcons
+            name="email"
+            size={24}
+            color={tintColorGreenLight}
+          />
           <Text style={styles.infoText}>pirapora@ifnmg.edu.br</Text>
         </TouchableOpacity>
       </View>
